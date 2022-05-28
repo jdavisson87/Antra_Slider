@@ -1,8 +1,9 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.scss";
-import { Button } from "@mui/material";
-import MyButton from "./components/MyButton/MyButton";
+import React from 'react';
+import logo from './logo.svg';
+import './App.scss';
+import { Button } from '@mui/material';
+import MyButton from './components/MyButton/MyButton';
+import MySlider from './components/MySlider/MySlider';
 //babel/webpack: transpile es6~es5, jsx~es5, tsx/ts~es5
 //tsc: transpile and typechecking
 
@@ -10,7 +11,10 @@ import MyButton from "./components/MyButton/MyButton";
 function App() {
   return (
     <div className="App">
-      <MyButton variant="outlined" size="small" color="primary">SUBMIT</MyButton>
+      {/* <MyButton variant="outlined" size="small" color="primary">
+        SUBMIT
+      </MyButton> */}
+      <MySlider />
     </div>
   );
 }
