@@ -1,0 +1,10 @@
+
+@use "./scss/reset";
+@use "./scss/variable";
+@use "./scss/mixin";
+
+@use "./components/MyButton/button";
+
+html{
+  padding:100px;
+}
