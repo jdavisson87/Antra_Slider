@@ -5,7 +5,7 @@ import './App.scss';
 function App():ReactElement {
   return (
   
-      <Slider variant='default' color='primary'  ISdisabled={false}/>
+      <Slider Max={350} color='coldefault' Step={10}/>
       
     );
 }

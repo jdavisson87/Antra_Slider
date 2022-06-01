@@ -3,3 +3,17 @@
         background:linear-gradient(to right, #3F51B5 0%, #3F51B5 #{$i}, #fff #{$i}, white 100%);
     }
 }
+
+
+$colorSelection: 'primary', 'secondary', 'coldefault';
+
+$slider-colors: (
+    "primary":#3F51B5,
+    "secondary": #F50057,
+    "coldefault": #e50606
+);
+$slider-variant: (
+    'vardefault': 'default',
+    'percentage':'per',
+    'numbered': 'num'
+);
