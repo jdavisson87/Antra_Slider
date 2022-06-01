@@ -1,8 +1,8 @@
-import React, { FC, ReactNode, MouseEvent, useState } from 'react';
+import React, { FC, MouseEvent, useState } from 'react';
 
 type SliderColor = 'primary' | 'secondary' | 'default';
 
-type SliderVariant = 'circle' | 'square' | 'image';
+type SliderVariant = 'circle' | 'square' | 'logo';
 
 interface MySliderProps {
   color?: SliderColor;
@@ -10,7 +10,7 @@ interface MySliderProps {
   min?: number;
   max?: number;
   step?: number;
-  value?: string;
+  value?: number;
   disabled?: boolean;
 }
 
@@ -21,20 +21,27 @@ const MySlider: FC<MySliderProps> = ({
   min = 0,
   max = 100,
   step = 1,
-  value = '100',
+  value = 100,
 }) => {
-  const [sliderValue, setSliderValue] = useState<string>(value);
+  const [sliderValue, setSliderValue] = useState<number>(value);
+
+  const composeClassName = () => {
+    const colorVariantCls = `slider-${color}-${variant}`;
+    const disabledCls = disabled ? `slider-disabled` : '';
+    return ['slider', colorVariantCls, disabledCls].join(' ');
+  };
 
   return (
     <>
       <input
+        className={composeClassName()}
         type="range"
         min={min}
         max={max}
         step={step}
         value={sliderValue}
         disabled={disabled}
-        onChange={(e) => setSliderValue(e.target.value)}
+        onChange={(e) => setSliderValue(parseInt(e.target.value))}
         id="mySlider"
       />
     </>
