@@ -21,7 +21,7 @@ const MySlider: FC<MySliderProps> = ({
   min = 0,
   max = 100,
   step = 1,
-  value = 100,
+  value = 50,
 }) => {
   const [sliderValue, setSliderValue] = useState<number>(value);
 
